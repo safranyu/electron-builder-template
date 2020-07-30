@@ -1,0 +1,4 @@
+node_modules
+electron
+package-lock.json
+yarn.lock

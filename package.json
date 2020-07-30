@@ -1,0 +1,83 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "electron-builder App demo",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron main.js",
+    "pack": "electron-packager . 'health-terminal' --platform=win32 --arch=x64  --out=./out --asar --app-version=0.0.1",
+    "build": "electron-builder --win --x64",
+    "build:dir": "electron-builder --mac --x64"
+  },
+  "build": {
+    "productName": "App demo",
+    "appId": "org.app.appDemo",
+    "copyright": "App demo",
+    "extends": null,
+    "directories": {
+      "output": "electron" 
+    },
+    "files": [
+      "main.js",
+      "dist/",
+      "./**/*"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "App demo",
+      "installerIcon": "./build/icons/icon.ico",
+      "uninstallerIcon": "./build/icons/icon.ico",
+      "installerHeaderIcon": "./build/icons/icon.ico"
+    },
+    "dmg": {
+      "contents": [{
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": [{
+        "target": "nsis",
+        "arch": [
+          "ia32"
+        ]
+      }]
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.1.1",
+    "electron-packager": "^15.0.0",
+    "electron-builder": "^22.7.0"
+  },
+  "dependencies": {
+    
+  }
+}
