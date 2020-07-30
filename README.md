@@ -2,7 +2,7 @@
 
 ## 介绍
 
-在`[electron-quick-start](https://github.com/electron/electron-quick-start)`模板上加上 `electron-builder` 的 template
+在[electron-quick-start](https://github.com/electron/electron-quick-start)模板上加上 `electron-builder` 的 template
 
 
 ## 启动
